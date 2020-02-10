@@ -1,4 +1,4 @@
-package com.dell.matrix.Configurations.Exceptions;
+package com.dell.matrix.configurations.Exceptions;
 
 public class RoleNotPermittedInEventException extends RuntimeException {
     public RoleNotPermittedInEventException(String message) {

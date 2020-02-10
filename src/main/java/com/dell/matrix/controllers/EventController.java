@@ -1,7 +1,7 @@
-package com.dell.matrix.Controllers;
+package com.dell.matrix.controllers;
 
-import com.dell.matrix.Models.Event;
-import com.dell.matrix.Services.EventService;
+import com.dell.matrix.models.Event;
+import com.dell.matrix.services.EventService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

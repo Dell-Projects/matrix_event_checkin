@@ -1,7 +1,7 @@
-package com.dell.matrix.Services;
+package com.dell.matrix.services;
 
-import com.dell.matrix.Models.Employee;
-import com.dell.matrix.Repositories.EmployeesRepository;
+import com.dell.matrix.models.Employee;
+import com.dell.matrix.repositories.EmployeesRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

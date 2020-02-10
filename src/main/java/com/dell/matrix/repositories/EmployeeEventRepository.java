@@ -1,11 +1,9 @@
-package com.dell.matrix.Repositories;
+package com.dell.matrix.repositories;
 
-import com.dell.matrix.Models.EmployeeEvent;
+import com.dell.matrix.models.EmployeeEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import java.util.Collection;
+
 import java.util.Optional;
 
 @Repository

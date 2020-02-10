@@ -1,7 +1,7 @@
-package com.dell.matrix.Controllers;
+package com.dell.matrix.controllers;
 
-import com.dell.matrix.Models.Employee;
-import com.dell.matrix.Services.EmployeeService;
+import com.dell.matrix.models.Employee;
+import com.dell.matrix.services.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

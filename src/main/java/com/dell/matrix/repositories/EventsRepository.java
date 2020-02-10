@@ -1,6 +1,6 @@
-package com.dell.matrix.Repositories;
+package com.dell.matrix.repositories;
 
-import com.dell.matrix.Models.Event;
+import com.dell.matrix.models.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

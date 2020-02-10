@@ -1,8 +1,6 @@
-package com.dell.matrix.Models.Transition;
+package com.dell.matrix.models.Transition;
 
 import lombok.*;
-
-import javax.persistence.Entity;
 
 @Getter
 @Setter

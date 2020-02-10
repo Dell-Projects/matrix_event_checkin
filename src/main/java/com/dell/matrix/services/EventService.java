@@ -1,11 +1,10 @@
-package com.dell.matrix.Services;
+package com.dell.matrix.services;
 
-import com.dell.matrix.Models.Event;
-import com.dell.matrix.Repositories.EventsRepository;
+import com.dell.matrix.models.Event;
+import com.dell.matrix.repositories.EventsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor

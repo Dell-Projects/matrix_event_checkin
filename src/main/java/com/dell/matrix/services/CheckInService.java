@@ -1,21 +1,18 @@
-package com.dell.matrix.Services;
+package com.dell.matrix.services;
 
-import com.dell.matrix.Configurations.Exceptions.CheckInAlreadyDoneException;
-import com.dell.matrix.Configurations.Exceptions.CheckInOutOfDateException;
-import com.dell.matrix.Configurations.Exceptions.EventNotFoundException;
-import com.dell.matrix.Configurations.Exceptions.EventOutOfCapacityException;
-import com.dell.matrix.Models.Employee;
-import com.dell.matrix.Models.EmployeeEvent;
-import com.dell.matrix.Models.Event;
-import com.dell.matrix.Models.Transition.CheckInRequest;
-import com.dell.matrix.Repositories.EmployeeEventRepository;
-import javassist.NotFoundException;
+import com.dell.matrix.configurations.Exceptions.CheckInAlreadyDoneException;
+import com.dell.matrix.configurations.Exceptions.CheckInOutOfDateException;
+import com.dell.matrix.configurations.Exceptions.EventOutOfCapacityException;
+import com.dell.matrix.models.Employee;
+import com.dell.matrix.models.EmployeeEvent;
+import com.dell.matrix.models.Event;
+import com.dell.matrix.models.Transition.CheckInRequest;
+import com.dell.matrix.repositories.EmployeeEventRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
