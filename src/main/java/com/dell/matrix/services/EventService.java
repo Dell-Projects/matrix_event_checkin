@@ -16,13 +16,13 @@ public class EventService {
         return eventsRepository.findAll();
     }
 
-    public Event getEvent(Long id) { return eventsRepository.findEventById(id); }
+    public Event getEventById(Long id) { return eventsRepository.findEventById(id); }
 
-    public Event addEvent(Event event) { return eventsRepository.save(event); }
+    public Event createEvent(Event event) { return eventsRepository.save(event); }
 
-    public void deletEvent(Long id) {
+    public void deleteEvent(Long id) {
         eventsRepository.deleteById(id);
     }
 
-    public Event setEvent(Event event) { return eventsRepository.save(event); }
+    public Event updateEvent(Event event) { return eventsRepository.save(event); }
 }

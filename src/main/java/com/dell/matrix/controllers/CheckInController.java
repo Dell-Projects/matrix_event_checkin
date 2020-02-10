@@ -18,4 +18,5 @@ public class CheckInController {
     public EmployeeEvent checkIn(@RequestBody CheckInRequest request) {
         return checkInService.checkInEvents(request);
     }
+
 }

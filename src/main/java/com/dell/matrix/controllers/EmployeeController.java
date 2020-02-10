@@ -4,6 +4,7 @@ import com.dell.matrix.models.Employee;
 import com.dell.matrix.services.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +22,7 @@ public class EmployeeController {
         return employeeService.getAllEmployees();
     }
 
-    @GetMapping("/employee")
-    public Optional<Employee> getEmployee (@RequestParam Long badge) { return employeeService.getEmployeeByBadge(badge); }
+    @GetMapping("/employees/{badge}")
+    public Optional<Employee> getEmployeeByBadge(@PathVariable Long badge) { return employeeService.getEmployeeByBadge(badge); }
 
 }

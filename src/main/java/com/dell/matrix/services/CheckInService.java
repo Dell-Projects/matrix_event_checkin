@@ -24,7 +24,7 @@ public class CheckInService {
 
     public EmployeeEvent checkInEvents(CheckInRequest request) {
 
-        Optional<Event> event = Optional.ofNullable(eventService.getEvent(request.getEventId()));
+        Optional<Event> event = Optional.ofNullable(eventService.getEventById(request.getEventId()));
         Optional<Employee> employee = employeeService.getEmployeeByBadge(request.getEmployeeBadge());
 
         EmployeeEvent checkin = new EmployeeEvent();
