@@ -1,10 +1,10 @@
-package com.dell.demo;
+package com.dell.matrix;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EventCheckinApplicationTests {
+class MatrixApplicationTests {
 
 	@Test
 	void contextLoads() {

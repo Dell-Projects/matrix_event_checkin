@@ -1,13 +1,13 @@
-package com.dell.demo;
+package com.dell.matrix;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EventCheckinApplication {
+public class MatrixApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EventCheckinApplication.class, args);
+		SpringApplication.run(MatrixApplication.class, args);
 	}
 
 }
