@@ -1,7 +1,7 @@
 package com.dell.matrix.controllers;
 
 import com.dell.matrix.models.EmployeeEvent;
-import com.dell.matrix.models.Transition.CheckInRequest;
+import com.dell.matrix.models.transition.CheckInRequest;
 import com.dell.matrix.services.CheckInService;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;

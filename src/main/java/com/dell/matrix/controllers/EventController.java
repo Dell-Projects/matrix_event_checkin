@@ -34,9 +34,7 @@ public class EventController {
 
     @ApiOperation("Update a event by id")
     @PutMapping("/events/{id}")
-    public Event updateEvent(@PathVariable Long id, @RequestBody Event event) {
-        return eventService.updateEvent(id, event);
-    }
+    public Event updateEvent(@PathVariable Long id, @RequestBody Event event) { return eventService.updateEvent(id, event); }
 
     @ApiOperation("Delete a event by id")
     @DeleteMapping("/events/{id}")

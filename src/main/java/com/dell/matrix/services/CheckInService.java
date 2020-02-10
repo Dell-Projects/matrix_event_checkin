@@ -6,8 +6,9 @@ import com.dell.matrix.configurations.Exceptions.EventOutOfCapacityException;
 import com.dell.matrix.models.Employee;
 import com.dell.matrix.models.EmployeeEvent;
 import com.dell.matrix.models.Event;
-import com.dell.matrix.models.Transition.CheckInRequest;
+import com.dell.matrix.models.transition.CheckInRequest;
 import com.dell.matrix.repositories.EmployeeEventRepository;
+import com.dell.matrix.repositories.EventsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +19,10 @@ import java.util.Optional;
 @AllArgsConstructor
 public class CheckInService {
 
-    EmployeeEventRepository employeeEventRepository;
     EventService eventService;
     EmployeeService employeeService;
+    EmployeeEventRepository employeeEventRepository;
+    EventsRepository eventsRepository;
 
     public EmployeeEvent checkInEvents(CheckInRequest request) {
 
@@ -61,12 +63,15 @@ public class CheckInService {
     }
 
     private Boolean isOutOfCapacity(Long eventId) {
+        Event desiredEvent = eventsRepository.findEventById(eventId);
 
-        // TODO: Saber a capacity do evento antes de fazer o checkin
-        // Opção 1: Ter um campo no modelo 'Event' que armazena a capacity atual do evento ***
-        // Opção 2: Fazer uma query para ver quantas pessoas possuem checkin no evento, para saber a capacity
-
-        return false;
+        if (desiredEvent.getCurrentCapacity() < desiredEvent.getMaxCapacity()) {
+            desiredEvent.setCurrentCapacity(desiredEvent.getCurrentCapacity() + 1);
+            eventsRepository.save(desiredEvent);
+            return false;
+        }
+        else
+            return true;
     }
 
 }

@@ -1,4 +1,4 @@
-package com.dell.matrix.models.Transition;
+package com.dell.matrix.models.transition;
 
 import lombok.*;
 
