@@ -63,7 +63,7 @@ public class CheckInService {
     private Boolean isOutOfCapacity(Long eventId) {
 
         // TODO: Saber a capacity do evento antes de fazer o checkin
-        // Opção 1: Ter um campo no modelo 'Event' que armazena a capacity atual do evento
+        // Opção 1: Ter um campo no modelo 'Event' que armazena a capacity atual do evento ***
         // Opção 2: Fazer uma query para ver quantas pessoas possuem checkin no evento, para saber a capacity
 
         return false;
