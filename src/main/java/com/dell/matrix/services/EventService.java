@@ -4,6 +4,7 @@ import com.dell.matrix.models.Event;
 import com.dell.matrix.repositories.EventsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -20,9 +21,19 @@ public class EventService {
 
     public Event createEvent(Event event) { return eventsRepository.save(event); }
 
+    public Event updateEvent(Long id, Event event) {
+        Event currentEvent = eventsRepository.findEventById(id);
+        currentEvent.setCapacity(event.getCapacity());
+        currentEvent.setDate(event.getDate());
+        currentEvent.setDescription(event.getDescription());
+        currentEvent.setEmployeeEvents(event.getEmployeeEvents());
+        currentEvent.setFinalDate(event.getFinalDate());
+        currentEvent.setHasGift(event.getHasGift());
+        return eventsRepository.save(currentEvent);
+    }
+
     public void deleteEvent(Long id) {
         eventsRepository.deleteById(id);
     }
 
-    public Event updateEvent(Event event) { return eventsRepository.save(event); }
 }

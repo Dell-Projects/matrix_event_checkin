@@ -29,8 +29,8 @@ public class EventController {
     }
 
     @PutMapping("/events/{id}")
-    public Event updateEvent(@PathVariable Event event) {
-        return eventService.updateEvent(event);
+    public Event updateEvent(@PathVariable Long id, @RequestBody Event event) {
+        return eventService.updateEvent(id, event);
     }
 
     @DeleteMapping("/events/{id}")
