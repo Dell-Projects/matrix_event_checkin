@@ -23,7 +23,7 @@ public class EventService {
 
     public Event updateEvent(Long id, Event event) {
         Event currentEvent = eventsRepository.findEventById(id);
-        currentEvent.setMaxCapacity(event.getMaxCapacity());
+        currentEvent.setCapacity(event.getCapacity());
         currentEvent.setDate(event.getDate());
         currentEvent.setDescription(event.getDescription());
         currentEvent.setEmployeeEvents(event.getEmployeeEvents());

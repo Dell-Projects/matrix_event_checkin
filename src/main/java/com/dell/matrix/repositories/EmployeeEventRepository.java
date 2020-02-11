@@ -12,10 +12,8 @@ public interface EmployeeEventRepository extends JpaRepository<EmployeeEvent, Lo
 
     Optional<EmployeeEvent> findByEmployeeBadgeAndEventId(Long employeeBadge, Long eventId);
 
-//    @Query("select p " +
-//            "from Partner p " +
-//            "left join Location l on p.name = l.partner " +
-//            "where l.partner is null")
-    Optional<EmployeeEvent> findAllByEventId(Long eventId);
+    // TODO: Change this query to JSQL query
+    @Query(value = "SELECT COUNT(event_id) FROM employee_events WHERE event_id = event_id", nativeQuery = true)
+    Long getEventCheckinCount(Long eventId);
 
 }

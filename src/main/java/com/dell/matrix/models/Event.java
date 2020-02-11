@@ -23,9 +23,9 @@ public class Event {
 
     private String description;
 
-    private Integer maxCapacity;
+    private Integer capacity;
 
-    private Integer currentCapacity;
+    private String eventTarget;
 
     private String location;
 

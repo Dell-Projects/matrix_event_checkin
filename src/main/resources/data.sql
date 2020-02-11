@@ -1,6 +1,6 @@
 --Employees
 INSERT INTO employees (badge, name, role)
-    VALUES (1, 'Luiz', 'Interno');
+    VALUES (1, 'Luiz', 'Intern');
 
 INSERT INTO employees (badge, name, role)
     VALUES (2, 'Lipe', 'Intern');
@@ -21,18 +21,18 @@ INSERT INTO employees (badge, name, role)
 INSERT INTO EVENTS (id,
                     name,
                     description,
-                    max_capacity,
-                    current_capacity,
+                    capacity,
                     location,
+                    event_target,
                     date,
                     final_date,
                     has_gift)
      VALUES (seq_event.nextval,
              'Dell Talk',
              'Talk about docker and kubernetes',
-             2,
-             0,
+             3,
              'Ping Pong table',
+             'Open',
              TO_DATE('2020/02/12 14:00:00', 'yyyy/mm/dd hh24:mi:ss'),
              TO_DATE('2020/02/12 16:00:00', 'yyyy/mm/dd hh24:mi:ss'),
              0);
@@ -40,9 +40,9 @@ INSERT INTO EVENTS (id,
 INSERT INTO EVENTS (id,
                     name,
                     description,
-                    max_capacity,
-                    current_capacity,
+                    capacity,
                     location,
+                    event_target,
                     date,
                     final_date,
                     has_gift)
@@ -50,8 +50,8 @@ INSERT INTO EVENTS (id,
            'Dell Talk',
            'Talk about quality assurance',
            30,
-           0,
            'Ping Pong table',
+           'Open',
            TO_DATE('2020/01/02 10:00:00', 'yyyy/mm/dd hh24:mi:ss'),
            TO_DATE('2020/01/02 13:00:00', 'yyyy/mm/dd hh24:mi:ss'),
            1);
