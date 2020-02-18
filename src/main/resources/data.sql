@@ -44,7 +44,7 @@ INSERT INTO EVENTS (id,
              'Ping Pong table',
              'Open',
              TO_DATE('2020/02/12 14:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-             TO_DATE('2020/02/12 16:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+             TO_DATE('2020/12/12 16:00:00', 'yyyy/mm/dd hh24:mi:ss'),
              0);
 
 INSERT INTO EVENTS (id,
@@ -63,7 +63,7 @@ INSERT INTO EVENTS (id,
              'Ping Pong table',
              'Open',
              TO_DATE('2020/02/12 14:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-             TO_DATE('2020/02/12 16:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+             TO_DATE('2020/12/12 16:00:00', 'yyyy/mm/dd hh24:mi:ss'),
              0);
 
 INSERT INTO EVENTS (id,
@@ -82,7 +82,7 @@ INSERT INTO EVENTS (id,
              'Erico Verissimo',
              'Intern',
              TO_DATE('2020/02/12 14:00:00', 'yyyy/mm/dd hh24:mi:ss'),
-             TO_DATE('2020/02/12 16:00:00', 'yyyy/mm/dd hh24:mi:ss'),
+             TO_DATE('2020/12/12 16:00:00', 'yyyy/mm/dd hh24:mi:ss'),
              1);
 
 INSERT INTO EVENTS (id,
