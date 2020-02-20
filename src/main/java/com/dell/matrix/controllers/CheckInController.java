@@ -5,9 +5,7 @@ import com.dell.matrix.models.transition.CheckInRequest;
 import com.dell.matrix.services.CheckInService;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
@@ -20,5 +18,8 @@ public class CheckInController {
     public EmployeeEvent checkIn(@RequestBody CheckInRequest request) {
         return checkInService.checkInEvents(request);
     }
+
+    @GetMapping("/checkin/{badge}")
+    public Long countCheckInByBadge(@PathVariable Long badge) { return checkInService.getCheckInByBadge(badge); }
 
 }
