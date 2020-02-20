@@ -4,6 +4,9 @@ import com.dell.matrix.models.Event;
 import com.dell.matrix.services.EventService;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,8 +19,8 @@ public class EventController {
 
     @ApiOperation("Get all events")
     @GetMapping("/events")
-    public List<Event> getAllEvents() {
-        return eventService.getAllEvents();
+    public Page<Event> getAllEvents(@PageableDefault Pageable pageable) {
+        return eventService.getAllEvents(pageable);
     }
 
     @ApiOperation("Get a event by id")

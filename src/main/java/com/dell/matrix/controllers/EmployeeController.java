@@ -4,6 +4,9 @@ import com.dell.matrix.models.Employee;
 import com.dell.matrix.services.EmployeeService;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,8 +23,8 @@ public class EmployeeController {
 
     @ApiOperation("Get all employees")
     @GetMapping("/employees")
-    public List<Employee> getAllEmployees() {
-        return employeeService.getAllEmployees();
+    public Page<Employee> getAllEmployees(@PageableDefault Pageable pageable) {
+        return employeeService.getAllEmployees(pageable);
     }
 
     @ApiOperation("Get a employee by his badge")

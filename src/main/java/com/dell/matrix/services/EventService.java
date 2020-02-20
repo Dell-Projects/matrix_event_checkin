@@ -3,6 +3,8 @@ package com.dell.matrix.services;
 import com.dell.matrix.models.Event;
 import com.dell.matrix.repositories.EventsRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,8 +15,8 @@ public class EventService {
 
     EventsRepository eventsRepository;
 
-    public List<Event> getAllEvents() {
-        return eventsRepository.findAll();
+    public Page<Event> getAllEvents(Pageable pageable) {
+        return eventsRepository.findAll(pageable);
     }
 
     public Event getEventById(Long id) { return eventsRepository.findEventById(id); }
