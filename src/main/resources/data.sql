@@ -18,13 +18,11 @@ INSERT INTO employees (badge, name, role)
     VALUES (6, 'Nicolas', 'Badge');
 
 INSERT INTO employees (badge, name, role)
-    VALUES (7, 'Jean', 'Contractor');
+    VALUES (7, 'Gabriel', 'Contractor');
 
 INSERT INTO employees (badge, name, role)
-    VALUES (8, 'Wagner', 'Contractor');
+    VALUES (8, 'Bernard', 'Contractor');
 
-INSERT INTO employees (badge, name, role)
-    VALUES (9, 'Arthur', 'Contractor');
 
 
 --Events
