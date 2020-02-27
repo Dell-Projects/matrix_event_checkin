@@ -92,4 +92,8 @@ public class CheckInService {
         return false;
     }
 
+    public Long getCheckInByBadge(Long eventId){
+        return employeeEventRepository.getEventCheckinCount(eventId);
+    }
+
 }
